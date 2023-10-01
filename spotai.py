@@ -13,8 +13,8 @@ import os, time
 from stqdm import stqdm
 load_dotenv()
 
-cid = os.getenv('ClIENT_ID')
-secret = os.getenv('CLIENT_SECRET')
+cid = st.secrets['CLIENT_ID']
+secret = st.secrets['CLIENT_SECRET']
 
 client_credentials_manager = SpotifyClientCredentials(client_id=cid, client_secret=secret)
 sp = spotipy.Spotify(client_credentials_manager = client_credentials_manager)
