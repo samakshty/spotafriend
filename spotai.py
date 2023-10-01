@@ -11,7 +11,15 @@ from spotipy.oauth2 import SpotifyClientCredentials
 from dotenv import load_dotenv
 import os, time
 from stqdm import stqdm
-load_dotenv()
+
+hide_streamlit_style = """
+            <style>
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+
+
 
 cid = st.secrets['CLIENT_ID']
 secret = st.secrets['CLIENT_SECRET']
